@@ -1,6 +1,6 @@
 ## TheRailsDeploy ...
 
-Deploy your Rails App like a Boss
+Setup & Deploy your Rails App like a Boss
 
 ## ... on DigitalOcean
 
