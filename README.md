@@ -304,6 +304,32 @@ apt-get install checkinstall build-essential bison openssl libreadline6 libreadl
 
 **ImageMagick**
 
+via sources
+
+```
+apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev
+```
+
+```
+wget https://webp.googlecode.com/files/libwebp-0.4.0.tar.gz
+tar xvzf libwebp-0.4.0.tar.gz
+cd libwebp-0.4.0/
+
+./configure
+checkinstall
+```
+
+```
+wget http://www.imagemagick.org/download/ImageMagick.tar.gz
+tar xvzf ImageMagick.tar.gz
+cd ImageMagick-6.8.8-8
+
+./configure
+checkinstall
+```
+
+via apt-get
+
 ```
 aptitude install libgd2-xpm libmagickcore-dev -y
 apt-get install  imagemagick libmagickcore-dev libmagickwand-dev -y
@@ -355,6 +381,26 @@ cd sphinx-2.1.9-release
 checkinstall
 ```
 
+**ElasticSearch**
+
+```
+cd /tmp
+apt-get install openjdk-7-jre-headless -y
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.deb
+
+# http://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php
+dpkg -i elasticsearch-1.1.1.deb
+
+dpkg -L elasticsearch | grep init # => /etc/init.d/elasticsearch
+
+ln -s /etc/init.d/elasticsearch /usr/local/bin/elasticsearch
+
+sudo service elasticsearch start
+sudo service elasticsearch stop
+
+elasticsearch start
+elasticsearch stop
+```
 
 **NodeJS**
 
@@ -371,3 +417,95 @@ Optional step
 apt-add-repository ppa:jon-severinsson/ffmpeg -y
 apt-get install ffmpeg -y
 ```
+
+**Redis**
+
+```
+cd /tmp
+
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+
+checkinstall
+```
+
+**Memcached**
+
+```
+sudo apt-get install memcached -y
+```
+
+**PhantomJS**
+
+```
+apt-get install phantomjs
+```
+
+**TMUX**
+
+```
+apt-get install tmux
+```
+
+#### Check installed soft again
+
+```
+~/check_soft.sh
+```
+
+You will see something like this
+
+```
+Base:
+
+Linux MyRailsApp 3.13.0-27-generic #50-Ubuntu SMP Thu May 15 18:06:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+DISTRIB_ID=Ubuntu DISTRIB_RELEASE=14.04 DISTRIB_CODENAME=trusty DISTRIB_DESCRIPTION="Ubuntu 14.04.1 LTS" NAME="Ubuntu" VERSION="14.04.1 LTS, Trusty Tahr" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 14.04.1 LTS" VERSION_ID="14.04" HOME_URL="http://www.ubuntu.com/" SUPPORT_URL="http://help.ubuntu.com/" BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+
+ /usr/bin/gcc
+ /usr/bin/checkinstall
+
+Langs:
+
+ /usr/local/rvm/bin/rvm
+ /usr/local/rvm/rubies/ruby-2.0.0-p353/bin/ruby
+ /usr/bin/node
+
+Converters:
+
+ /usr/bin/ffmpeg
+ /usr/bin/convert
+
+CacheStores:
+
+ /usr/bin/memcached
+ /usr/local/bin/redis-server
+
+DataBases:
+
+ /usr/bin/psql
+ /usr/bin/mysql
+
+Search:
+
+ /usr/local/bin/searchd
+ /usr/local/bin/elasticsearch
+
+Helpers:
+
+ /usr/bin/git
+ /usr/bin/tmux
+ /usr/bin/phantomjs
+
+Image Optimizers:
+
+ /usr/bin/gifsicle
+ /usr/bin/jhead
+ /usr/bin/jpegoptim
+ /usr/bin/jpegtran
+ /usr/bin/optipng
+ /usr/bin/pngcrush
+ /usr/local/bin/pngout
+```
+
+*Well done!*
