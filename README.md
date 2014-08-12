@@ -4,6 +4,8 @@ Setup & Deploy your Rails App like a Boss
 
 ## ... on DigitalOcean
 
+#### Create Droplet
+
 1. Sign up, Log in
 2. Create Droplet https://cloud.digitalocean.com/droplets/new
 
@@ -108,3 +110,5 @@ To get a list of Rubies: rvm list
 To get Gem environment: gem env
 -------------------------------------------------------------------------------------
 ```
+
+**Well done!**
