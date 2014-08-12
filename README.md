@@ -42,3 +42,69 @@ IP Address: 178.62.15.173
 Username: root
 Password: YOUR_ROOT_PASSWORD
 ```
+
+**first visit**
+
+```
+ssh root@178.62.15.173
+```
+
+```
+The authenticity of host '178.62.15.173 (178.62.15.173)' can't be established.
+RSA key fingerprint is 7b:32:36:00:c5:c9:28:86:8e:12:84:21:64:f3:c8:af.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '178.62.15.173' (RSA) to the list of known hosts.
+root@178.62.15.173's password:
+```
+
+Type *YOUR_ROOT_PASSWORD*
+
+```
+You are required to change your password immediately (root enforced)
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-27-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+You have new mail.
+Last login: Tue Aug 12 04:33:10 2014 from 139.168.200.200
+```
+
+Welcome and change your root password
+
+```
+Changing password for root.
+(current) UNIX password: YOUR_ROOT_PASSWORD
+
+Enter  new UNIX password: ROOT_PASSWORD
+Retype new UNIX password: ROOT_PASSWORD
+```
+
+```
+-------------------------------------------------------------------------------------
+Thank you for using DigitalOcean's Rails Application.
+We have created a default Rails application that can be seen from http://178.62.15.173/
+-------------------------------------------------------------------------------------
+You can use the following SFTP credentials to upload your webpages (using FileZilla/WinSCP/Rsync):
+
+Host: 178.62.15.173
+User: rails
+Pass: SFTP_PASSWORD
+
+-------------------------------------------------------------------------------------
+“These instructions are stored in /root/RAILS for your review.n”You can use the following MySQL database credentials:
+
+DB: rails
+User: rails
+Pass: RAILS_USER_PASSWORD
+
+If you require root database credentials, they are in /root/.my.cnf
+-------------------------------------------------------------------------------------
+Nginx listens on public IP (178.62.15.173) port 80 and forwards requests to Unicorn on port 8080
+Nginx access log is in /var/log/nginx/access.log and error log is in /var/log/nginx/error.log
+Unicorn configuration files are in /home/unicorn/unicorn.conf and /etc/default/unicorn
+Unicorn log is in /home/unicorn/log/unicorn.log
+-------------------------------------------------------------------------------------
+To get a list of available gems: gem list
+To get a list of Rubies: rvm list
+To get Gem environment: gem env
+-------------------------------------------------------------------------------------
+```
