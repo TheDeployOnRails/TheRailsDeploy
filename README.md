@@ -89,14 +89,14 @@ You can use the following SFTP credentials to upload your webpages (using FileZi
 
 Host: 178.62.15.173
 User: rails
-Pass: SFTP_PASSWORD
+Pass: RAILS_USER_PASSWORD
 
 -------------------------------------------------------------------------------------
 “These instructions are stored in /root/RAILS for your review.n”You can use the following MySQL database credentials:
 
 DB: rails
 User: rails
-Pass: RAILS_USER_PASSWORD
+Pass: RAILS_DB_PASSWORD
 
 If you require root database credentials, they are in /root/.my.cnf
 -------------------------------------------------------------------------------------
