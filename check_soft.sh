@@ -45,6 +45,7 @@ title "Base:"
 os_check
 
 check_soft 'gcc'
+check_soft 'checkinstall'
 
 title "Langs:"
 
