@@ -299,9 +299,7 @@ export LC_ALL="en_US.UTF-8"
 apt-get install aptitude -y
 apt-get update && apt-get upgrade
 
-apt-get install checkinstall
-
-apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev autoconf libc6-dev -y
+apt-get install checkinstall build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev autoconf libc6-dev -y
 ```
 
 **ImageMagick**
@@ -320,6 +318,43 @@ apt-get update --fix-missing
 
 apt-get install advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush -y
 ```
+
+```
+cd /tmp
+wget http://static.jonof.id.au/dl/kenutils/pngout-20130221-linux.tar.gz
+tar -xzf pngout-20130221-linux.tar.gz
+cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
+```
+
+**PostgreSql**
+
+```
+apt-get install postgresql postgresql-contrib -y
+```
+
+If user `postgres` are required
+
+```
+createuser -s postgres
+sudo su - postgres
+psql -U postgres
+createdb -E UTF8 -O postgres postgres
+```
+
+**Sphinx**
+
+```
+cd /tmp
+
+wget http://sphinxsearch.com/files/sphinx-2.1.9-release.tar.gz
+tar xvzf sphinx-2.1.9-release.tar.gz
+cd sphinx-2.1.9-release
+
+./configure --with-pgsql --with-mysql
+
+checkinstall
+```
+
 
 **NodeJS**
 
