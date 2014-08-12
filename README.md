@@ -56,10 +56,8 @@ The authenticity of host '178.62.15.173 (178.62.15.173)' can't be established.
 RSA key fingerprint is 7b:32:36:34:c5:c9:18:86:8e:12:84:21:23:f3:c8:af.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added '178.62.15.173' (RSA) to the list of known hosts.
-root@178.62.15.173's password:
+root@178.62.15.173's password: [YOUR_ROOT_PASSWORD]
 ```
-
-**Type *YOUR_ROOT_PASSWORD***
 
 ```
 You are required to change your password immediately (root enforced)
@@ -111,7 +109,7 @@ To get Gem environment: gem env
 -------------------------------------------------------------------------------------
 ```
 
-**Well done!**
+*Well done!*
 
 #### Visit your server via ssh key
 
@@ -207,7 +205,7 @@ cat ~/.ssh/id_rsa.pub | ssh rails@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
 password: [RAILS_USER_PASSWORD]
 ```
 
-**try to access to your server**
+**3.** Try to access to your server
 
 If your Passphrase was empty, you will pass to server without password
 
