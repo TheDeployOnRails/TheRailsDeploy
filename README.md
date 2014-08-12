@@ -226,9 +226,7 @@ cd ~
 
 wget https://raw.githubusercontent.com/the-teacher/TheRailsDeploy/master/check_soft.sh
 chmod 744 check_soft.sh
-```
 
-```
 ~/check_soft.sh
 ```
 
@@ -283,4 +281,58 @@ Image Optimizers:
  optipng : Not found
  pngcrush : Not found
  pngout : Not found
+```
+
+#### Install soft
+
+```
+ssh root@178.62.15.173
+
+sudo locale-gen
+sudo dpkg-reconfigure locales
+
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+```
+
+```
+apt-get install aptitude -y
+apt-get update && apt-get upgrade
+
+apt-get install checkinstall
+
+apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev autoconf libc6-dev -y
+```
+
+**ImageMagick**
+
+```
+aptitude install libgd2-xpm libmagickcore-dev -y
+apt-get install  imagemagick libmagickcore-dev libmagickwand-dev -y
+```
+
+**Image optimizers**
+
+Optional step
+
+```
+apt-get update --fix-missing
+
+apt-get install advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush -y
+```
+
+**NodeJS**
+
+```
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+apt-get install nodejs -y
+```
+
+**FFMPG**
+
+Optional step
+
+```
+apt-add-repository ppa:jon-severinsson/ffmpeg -y
+apt-get install ffmpeg -y
 ```
