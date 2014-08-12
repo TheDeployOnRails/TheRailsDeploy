@@ -191,14 +191,14 @@ root@178.62.15.173's password: [RAILS_USER_PASSWORD]
 mkdir -p ~/.ssh
 ```
 
-**copy public ssh key on server for root**
+**Authorize public ssh key on server for root**
 
 ```
 cat ~/.ssh/id_rsa.pub | ssh root@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
 password: [ROOT_PASSWORD]
 ```
 
-**copy public ssh key on server for  rails user**
+**Authorize public ssh key on server for  rails user**
 
 ```
 cat ~/.ssh/id_rsa.pub | ssh rails@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
