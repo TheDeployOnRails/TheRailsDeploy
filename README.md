@@ -175,3 +175,18 @@ ssh-add ~/.ssh/id_rsa && ssh-add -L
 
 *IMPORTANT: `ssh-add ~/.ssh/id_rsa && ssh-add -L` can be required on each system reboot*
 
+2. Copy your public ssh key on server
+
+**for root**
+
+```
+cat ~/.ssh/id_rsa.pub | ssh root@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
+password: [ROOT_PASSWORD]
+```
+
+**for rails user**
+
+```
+cat ~/.ssh/id_rsa.pub | ssh rails@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
+password: [RAILS_USER_PASSWORD]
+```
