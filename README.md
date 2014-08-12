@@ -1,4 +1,4 @@
-## TheRailsDeploy
+## TheRailsDeploy ...
 
 Deploy your Rails App like a Boss
 
