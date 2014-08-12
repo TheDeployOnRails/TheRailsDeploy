@@ -115,7 +115,7 @@ To get Gem environment: gem env
 
 #### Visit your server via ssh key
 
-1. Create new ssh pair on local machine *(if you need)*
+**1.** Create new ssh pair on local machine *(if you need)*
 
 **Create .ssh folder in HOME and check it**
 
@@ -175,7 +175,7 @@ ssh-add ~/.ssh/id_rsa && ssh-add -L
 
 *IMPORTANT: `ssh-add ~/.ssh/id_rsa && ssh-add -L` can be required on each system reboot*
 
-2. Copy your public ssh key on server
+**2.** Copy your public ssh key on server
 
 **for root**
 
