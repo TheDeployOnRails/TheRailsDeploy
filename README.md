@@ -216,3 +216,71 @@ ssh root@178.62.15.173
 ```
 ssh rails@178.62.15.173
 ```
+
+#### Check installed soft
+
+```
+ssh root@178.62.15.173
+
+cd ~
+
+wget https://raw.githubusercontent.com/the-teacher/TheRailsDeploy/master/check_soft.sh
+chmod 744 check_soft.sh
+```
+
+```
+~/check_soft.sh
+```
+
+You will see something like this
+
+```
+Base:
+
+Linux MyRailsApp 3.13.0-27-generic #50-Ubuntu SMP Thu May 15 18:06:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+DISTRIB_ID=Ubuntu DISTRIB_RELEASE=14.04 DISTRIB_CODENAME=trusty DISTRIB_DESCRIPTION="Ubuntu 14.04 LTS" NAME="Ubuntu" VERSION="14.04, Trusty Tahr" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 14.04 LTS" VERSION_ID="14.04" HOME_URL="http://www.ubuntu.com/" SUPPORT_URL="http://help.ubuntu.com/" BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+ 
+/usr/bin/gcc
+ 
+Langs:
+
+ /usr/local/rvm/bin/rvm
+ /usr/local/rvm/rubies/ruby-2.0.0-p353/bin/ruby
+ node : Not found
+
+Converters:
+
+ ffmpeg : Not found
+ convert : Not found
+
+CacheStores:
+
+ memcached : Not found
+ redis-server : Not found
+
+DataBases:
+
+ psql : Not found
+ /usr/bin/mysql
+
+Search:
+
+ searchd : Not found
+ elasticsearch : Not found
+
+Helpers:
+
+ git : Not found
+ tmux : Not found
+ phantomjs : Not found
+
+Image Optimizers:
+
+ gifsicle : Not found
+ jhead : Not found
+ jpegoptim : Not found
+ jpegtran : Not found
+ optipng : Not found
+ pngcrush : Not found
+ pngout : Not found
+```
