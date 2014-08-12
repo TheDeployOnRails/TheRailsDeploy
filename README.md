@@ -34,7 +34,7 @@ as you wish
 Applications > Ruby on Rails on Ubuntu 14.04 (Nginx + Unicorn)
 ```
 
-Check your email
+**Check your email**
 
 ```
 Your new droplet has been created!
@@ -45,7 +45,7 @@ Username: root
 Password: YOUR_ROOT_PASSWORD
 ```
 
-**first visit**
+**First visit**
 
 ```
 ssh root@178.62.15.173
@@ -59,7 +59,7 @@ Warning: Permanently added '178.62.15.173' (RSA) to the list of known hosts.
 root@178.62.15.173's password:
 ```
 
-Type *YOUR_ROOT_PASSWORD*
+**Type *YOUR_ROOT_PASSWORD***
 
 ```
 You are required to change your password immediately (root enforced)
@@ -70,7 +70,7 @@ You have new mail.
 Last login: Tue Aug 12 04:33:10 2014 from 139.168.200.200
 ```
 
-Welcome and change your root password
+**Welcome and change your root password**
 
 ```
 Changing password for root.
