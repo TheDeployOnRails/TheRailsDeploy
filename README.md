@@ -4,7 +4,14 @@ Deploy your Rails App like a Boss
 
 ## ... on DigitalOcean
 
-1. Create Droplet https://cloud.digitalocean.com/droplets/new
+1. Sign up, Log in
+2. Create Droplet https://cloud.digitalocean.com/droplets/new
+
+**Droplet Hostname**
+
+```
+MyRailsApp
+```
 
 **Select Size**
 
