@@ -32,3 +32,13 @@ as you wish
 Applications > Ruby on Rails on Ubuntu 14.04 (Nginx + Unicorn)
 ```
 
+Check your email
+
+```
+Your new droplet has been created!
+
+You can access it using the following credentials:
+IP Address: 178.62.15.173
+Username: root
+Password: YOUR_ROOT_PASSWORD
+```
