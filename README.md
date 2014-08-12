@@ -53,7 +53,7 @@ ssh root@178.62.15.173
 
 ```
 The authenticity of host '178.62.15.173 (178.62.15.173)' can't be established.
-RSA key fingerprint is 7b:32:36:00:c5:c9:28:86:8e:12:84:21:64:f3:c8:af.
+RSA key fingerprint is 7b:32:36:34:c5:c9:18:86:8e:12:84:21:23:f3:c8:af.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added '178.62.15.173' (RSA) to the list of known hosts.
 root@178.62.15.173's password:
@@ -112,3 +112,31 @@ To get Gem environment: gem env
 ```
 
 **Well done!**
+
+#### Visit your server via ssh key
+
+1. Create new ssh pair on local machine *(if you need)*
+
+**Create .ssh folder in HOME and check it**
+
+```
+mkdir -p ~/.ssh && ls -al ~/.ssh
+```
+
+**You should to create ssh keys if you see**
+
+```
+drwx------   6 admin  staff   204 Jun  2 22:46 .
+drwxr-xr-x+ 46 admin  staff  1564 Aug 12 08:48 ..
+```
+
+**You can pass creating of ssh keys if you see something like this**
+
+```
+drwx------   6 admin  staff   204 Jun  2 22:46 .
+drwxr-xr-x+ 46 admin  staff  1564 Aug 12 08:48 ..
+-rw-------   1 admin  staff  1675 May 18 17:42 id_rsa
+-rw-r--r--   1 admin  staff   398 May 18 17:42 id_rsa.pub
+-rw-r--r--   1 admin  staff  6855 Aug 12 08:32 known_hosts
+```
+
