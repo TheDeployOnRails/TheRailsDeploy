@@ -283,9 +283,12 @@ Image Optimizers:
  pngout : Not found
 ```
 
-Add Missing Env variable LC_ALL to `.bashrc` and reload it
+Add Missing ENV variable LC_ALL for Perl to `.bashrc` and reload it
 
 ```
+# sudo locale-gen
+# sudo dpkg-reconfigure locales
+
 echo '''export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -295,14 +298,6 @@ source ~/.bashrc
 ```
 ssh root@178.62.15.173
 
-sudo locale-gen
-sudo dpkg-reconfigure locales
-
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-```
-
-```
 apt-get install aptitude -y
 apt-get update && apt-get upgrade
 
