@@ -54,10 +54,6 @@ function lang_vars_check {
   done
 }
 
-title "Check LANG vars:"
-
-lang_vars_check
-
 title "Base:"
 
 os_check
@@ -65,7 +61,11 @@ os_check
 check_soft 'gcc'
 check_soft 'checkinstall'
 
-title "Langs:"
+title "Check LANG vars:"
+
+lang_vars_check
+
+title "Programming Langs:"
 
 check_soft 'rvm'
 check_soft 'ruby'
