@@ -237,10 +237,17 @@ Base:
 
 Linux MyRailsApp 3.13.0-27-generic #50-Ubuntu SMP Thu May 15 18:06:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
 DISTRIB_ID=Ubuntu DISTRIB_RELEASE=14.04 DISTRIB_CODENAME=trusty DISTRIB_DESCRIPTION="Ubuntu 14.04 LTS" NAME="Ubuntu" VERSION="14.04, Trusty Tahr" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 14.04 LTS" VERSION_ID="14.04" HOME_URL="http://www.ubuntu.com/" SUPPORT_URL="http://help.ubuntu.com/" BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
- 
-/usr/bin/gcc
- 
-Langs:
+ /usr/bin/gcc
+ checkinstall : Not found
+
+Check LANG vars:
+
+LANGUAGE has value: en_US:en
+LANG has value: en_US.UTF-8
+LC_ALL should be set
+LC_CTYPE has value: UTF-8
+
+Programming Langs:
 
  /usr/local/rvm/bin/rvm
  /usr/local/rvm/rubies/ruby-2.0.0-p353/bin/ruby
