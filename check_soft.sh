@@ -13,7 +13,9 @@ WHITE='tput setaf 7'
 STYLE_OFF='tput sgr0'
 
 function title {
+  echo
   echo `$CYAN`$1`$STYLE_OFF`
+  echo
 }
 
 function not_found {
@@ -39,6 +41,22 @@ function os_check {
     echo `$BLUE`$(cat /etc/*release)`$STYLE_OFF`
   fi
 }
+
+function lang_vars_check {
+  checking_env_vars=(LANGUAGE LANG LC_ALL LC_CTYPE)
+
+  for var_name in ${checking_env_vars[*]}; do
+    if [ -z "${!var_name}" ]; then
+      echo "`$YELLOW`$var_name`$STYLE_OFF`" "`$RED`should be set`$STYLE_OFF`"
+    else
+      echo "`$YELLOW`$var_name`$STYLE_OFF`" "`$GREEN`has value:`$STYLE_OFF` `$CYAN`${!var_name}`$STYLE_OFF`"
+    fi
+  done
+}
+
+title "Check LANG vars:"
+
+lang_vars_check
 
 title "Base:"
 
