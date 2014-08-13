@@ -452,6 +452,7 @@ Optional step
 
 ```
 apt-add-repository ppa:jon-severinsson/ffmpeg -y
+sudo apt-get update
 apt-get install ffmpeg -y
 ```
 
