@@ -230,6 +230,24 @@ chmod 744 check_soft.sh
 ~/check_soft.sh
 ```
 
+```
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+
+LANGUAGE = "en_US:en",
+LC_ALL = (unset),
+LC_CTYPE = "UTF-8",
+LANG = "en_US.UTF-8"
+
+echo $LANGUAGE
+echo $LC_ALL
+echo $LC_CTYPE
+echo $LANG
+
+echo "export LC_ALL=\"en_US.UTF-8\"" >> ~/.bashrc
+source ~/.bashrc
+```
+
 You will see something like this
 
 ```
