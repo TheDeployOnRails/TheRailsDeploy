@@ -304,6 +304,14 @@ source ~/.bashrc
 
 #### Install soft
 
+Ruby
+
+```
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.1 ruby2.1-dev
+```
+
 ```
 ssh root@178.62.15.173
 
