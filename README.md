@@ -316,7 +316,7 @@ apt-get install checkinstall build-essential bison openssl libreadline6 libreadl
 via sources
 
 ```
-apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev
+apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev -y
 ```
 
 ```
