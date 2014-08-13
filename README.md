@@ -306,7 +306,7 @@ source ~/.bashrc
 ssh root@178.62.15.173
 
 apt-get install aptitude -y
-apt-get update && apt-get upgrade
+apt-get update && apt-get upgrade -y
 
 apt-get install checkinstall build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev autoconf libc6-dev -y
 ```
