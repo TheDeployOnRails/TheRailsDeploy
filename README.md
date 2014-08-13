@@ -293,10 +293,12 @@ Image Optimizers:
 Add Missing ENV variable LC_ALL for Perl to `.bashrc` and reload it
 
 ```
-# sudo locale-gen
-# sudo dpkg-reconfigure locales
+# locale-gen
+# dpkg-reconfigure locales
 
 echo '''export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
+echo '''export LANGUAGE="en_US:en"'  >> ~/.bashrc
+
 source ~/.bashrc
 ```
 
@@ -361,19 +363,33 @@ tar -xzf pngout-20130221-linux.tar.gz
 cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
 ```
 
+**MySql**
+
+```
+echo '''deb http://us.archive.ubuntu.com/ubuntu precise main universe' >> /etc/apt/sources.list 
+apt-get update
+
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYSQL_ROOT_PASSWORD'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYSQL_ROOT_PASSWORD'
+
+apt-get install mysql-server mysql-common mysql-client libmysqlclient-dev libmysql-ruby -y
+mysql -u root -pMYSQL_ROOT_PASSWORD
+```
+
 **PostgreSql**
 
 ```
-apt-get install postgresql postgresql-contrib -y
+apt-get install postgresql postgresql-contrib  libpq-dev -y
 ```
 
 If user `postgres` are required
 
 ```
-createuser -s postgres
+# createuser -s postgres
+
 sudo su - postgres
-psql -U postgres
 createdb -E UTF8 -O postgres postgres
+psql -U postgres
 ```
 
 **Sphinx**
@@ -386,6 +402,10 @@ tar xvzf sphinx-2.1.9-release.tar.gz
 cd sphinx-2.1.9-release
 
 ./configure --with-pgsql --with-mysql
+
+export C_INCLUDE_PATH=/usr/include/postgresql/
+export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
+export LIBRARY_PATH=/usr/include/postgresql/
 
 checkinstall
 ```
