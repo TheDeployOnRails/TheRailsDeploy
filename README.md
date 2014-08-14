@@ -302,6 +302,12 @@ echo '''export LANGUAGE="en_US:en"'  >> ~/.bashrc
 source ~/.bashrc
 ```
 
+List of users
+
+```
+awk -F":" '{ print "username: " $1 }' /etc/passwd
+```
+
 #### Install soft
 
 Ruby
