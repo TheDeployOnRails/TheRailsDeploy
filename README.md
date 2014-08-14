@@ -406,6 +406,7 @@ If user `postgres` are required
 
 ```
 # createuser -s postgres
+# createuser -d -a -P rails
 
 sudo su - postgres
 createdb -E UTF8 -O postgres postgres
