@@ -10,7 +10,9 @@ apt-get install aptitude -y
 apt-get update && apt-get upgrade -y
 
 apt-get install build-essential -y
-apt-get install curl checkinstall autoconf openssl libssl-dev libc6-dev libreadline6 libreadline6-dev libxml2 libxml2-dev libxslt1.1 libxslt1-dev libxslt-dev zlib1g zlib1g-dev -y
+apt-get install curl checkinstall git git-core autoconf
+apt-get install openssl libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev libc6-dev -y
+apt-get install bison libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 -y
 
 apt-add-repository ppa:brightbox/ruby-ng -y
 apt-get update
@@ -52,3 +54,15 @@ su - postgres
 createuser -d -a -P rails_app_user
 createdb -E UTF8 -O rails_app_user rails_app_database
 psql -h localhost -U rails_app_user -d rails_app_database
+
+cd /tmp
+wget http://sphinxsearch.com/files/sphinx-2.1.9-release.tar.gz
+tar xvzf sphinx-2.1.9-release.tar.gz
+cd sphinx-2.1.9-release
+
+./configure --with-pgsql --with-mysql
+export C_INCLUDE_PATH=/usr/include/postgresql/
+export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
+export LIBRARY_PATH=/usr/include/postgresql/
+
+checkinstall
