@@ -29,7 +29,7 @@ apt-get install ruby2.1 ruby2.1-dev -y
 ```
 
 ```
-apt-get install curl checkinstall git git-core autoconf
+apt-get install curl checkinstall git git-core autoconf -y
 apt-get install openssl libssl-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev libc6-dev -y
 apt-get install bison libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 -y
 ```
