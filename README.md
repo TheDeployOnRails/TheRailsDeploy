@@ -308,6 +308,12 @@ List of users
 awk -F":" '{ print "username: " $1 }' /etc/passwd
 ```
 
+create folder for www applications
+
+```
+mkdir -p /srv/www
+```
+
 #### Install soft
 
 Ruby
