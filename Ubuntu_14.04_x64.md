@@ -59,10 +59,25 @@ cd /tmp
 wget http://sphinxsearch.com/files/sphinx-2.1.9-release.tar.gz
 tar xvzf sphinx-2.1.9-release.tar.gz
 cd sphinx-2.1.9-release
-
 ./configure --with-pgsql --with-mysql
 export C_INCLUDE_PATH=/usr/include/postgresql/
 export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
 export LIBRARY_PATH=/usr/include/postgresql/
-
 checkinstall
+
+cd /tmp
+apt-get install openjdk-7-jre-headless -y
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.deb
+dpkg -i elasticsearch-1.1.1.deb
+ln -s /etc/init.d/elasticsearch /usr/local/bin/elasticsearch
+
+apt-get install phantomjs -y
+
+apt-get install advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush -y
+
+cd /tmp
+wget http://static.jonof.id.au/dl/kenutils/pngout-20130221-linux.tar.gz
+tar -xzf pngout-20130221-linux.tar.gz
+cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
+
+
