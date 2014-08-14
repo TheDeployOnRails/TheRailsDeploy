@@ -329,6 +329,7 @@ ssh root@178.62.15.173
 
 apt-get install aptitude -y
 apt-get update && apt-get upgrade -y
+# apt-get update --fix-missing
 
 apt-get install checkinstall build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxslt1.1 libxslt1-dev libxml2 libxml2-dev libxslt-dev autoconf libc6-dev -y
 ```
@@ -342,6 +343,8 @@ apt-get install libjpeg-dev libpng-dev libtiff-dev libgif-dev -y
 ```
 
 ```
+cd /tmp
+
 wget https://webp.googlecode.com/files/libwebp-0.4.0.tar.gz
 tar xvzf libwebp-0.4.0.tar.gz
 cd libwebp-0.4.0/
@@ -371,8 +374,6 @@ apt-get install  imagemagick libmagickcore-dev libmagickwand-dev -y
 Optional step
 
 ```
-apt-get update --fix-missing
-
 apt-get install advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush -y
 ```
 
