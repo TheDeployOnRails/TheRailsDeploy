@@ -147,3 +147,19 @@ wget http://static.jonof.id.au/dl/kenutils/pngout-20130221-linux.tar.gz
 tar -xzf pngout-20130221-linux.tar.gz
 cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
 ```
+
+root
+
+```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.bashrc
+rvm list
+```
+
+rails
+
+```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.bashrc
+rvm list
+```
