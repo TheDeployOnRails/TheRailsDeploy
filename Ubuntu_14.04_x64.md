@@ -114,11 +114,15 @@ cd /tmp
 wget http://sphinxsearch.com/files/sphinx-2.1.9-release.tar.gz
 tar xvzf sphinx-2.1.9-release.tar.gz
 cd sphinx-2.1.9-release
+
 ./configure --with-pgsql --with-mysql
-export C_INCLUDE_PATH=/usr/include/postgresql/
-export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
-export LIBRARY_PATH=/usr/include/postgresql/
+
 checkinstall
+
+# PS: if libpq-fe.h not found, following exposts can be helpful
+# export C_INCLUDE_PATH=/usr/include/postgresql/
+# export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
+# export LIBRARY_PATH=/usr/include/postgresql/
 ```
 
 ```
