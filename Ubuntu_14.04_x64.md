@@ -81,11 +81,13 @@ checkinstall
 ```
 echo '''deb http://us.archive.ubuntu.com/ubuntu precise main universe' >> /etc/apt/sources.list
 apt-get update
+
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYSQL_ROOT_PASSWORD'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYSQL_ROOT_PASSWORD'
-apt-get install mysql-server mysql-common mysql-client libmysqlclient-dev libmysql-ruby -y
-mysql -u root -pMYSQL_ROOT_PASSWORD
 
+apt-get install mysql-server mysql-common mysql-client libmysqlclient-dev libmysql-ruby -y
+
+mysql -u root -pMYSQL_ROOT_PASSWORD
 mysql> CREATE USER 'rails'@'localhost' IDENTIFIED BY 'MYSQL_RAILS_USER_PASSWORD';
 mysql> \q
 ```
@@ -94,8 +96,17 @@ mysql> \q
 apt-get install postgresql postgresql-contrib libpq-dev -y
 su - postgres
 createuser -d -a -P rails
+
+Enter password for new role: [PSQL_RAILS_USER_PASSWORD]
+Enter it again: [PSQL_RAILS_USER_PASSWORD]
+
 createdb -E UTF8 -O rails rails_app_database
+
 psql -h localhost -U rails -d rails_app_database
+Password for user rails: [PSQL_RAILS_USER_PASSWORD]
+psql> \q
+
+exit
 ```
 
 ```
