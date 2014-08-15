@@ -29,11 +29,11 @@ apt-get install ruby2.1 ruby2.1-dev -y
 ```
 
 ```
-useradd rails_app_user
-passwd rails_app_user
+useradd rails
+passwd rails
 
-Enter new UNIX password:  [RAILS_APP_USER_PASSWORD]
-Retype new UNIX password: [RAILS_APP_USER_PASSWORD]
+Enter new UNIX password:  [RAILS_USER_PASSWORD]
+Retype new UNIX password: [RAILS_USER_PASSWORD]
 ```
 
 ```
