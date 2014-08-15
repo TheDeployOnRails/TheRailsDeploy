@@ -85,6 +85,9 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYS
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYSQL_ROOT_PASSWORD'
 apt-get install mysql-server mysql-common mysql-client libmysqlclient-dev libmysql-ruby -y
 mysql -u root -pMYSQL_ROOT_PASSWORD
+
+mysql> CREATE USER 'rails'@'localhost' IDENTIFIED BY 'MYSQL_RAILS_USER_PASSWORD';
+mysql> \q
 ```
 
 ```
