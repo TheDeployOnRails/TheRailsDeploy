@@ -90,9 +90,9 @@ mysql -u root -pMYSQL_ROOT_PASSWORD
 ```
 apt-get install postgresql postgresql-contrib libpq-dev -y
 su - postgres
-createuser -d -a -P rails_app_user
-createdb -E UTF8 -O rails_app_user rails_app_database
-psql -h localhost -U rails_app_user -d rails_app_database
+createuser -d -a -P rails
+createdb -E UTF8 -O rails rails_app_database
+psql -h localhost -U rails -d rails_app_database
 ```
 
 ```
