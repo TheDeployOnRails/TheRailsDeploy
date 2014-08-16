@@ -1,4 +1,4 @@
-```
+```sh
 cd ~
 
 wget https://raw.githubusercontent.com/the-teacher/TheRailsDeploy/master/check_soft.sh
