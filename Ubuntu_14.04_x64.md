@@ -155,6 +155,17 @@ tar -xzf pngout-20130221-linux.tar.gz
 cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
 ```
 
+```
+cd /tmp
+wget http://nginx.org/download/nginx-1.7.4.tar.gz
+tar -xzf nginx-1.7.4.tar.gz
+cd nginx-1.7.4/
+
+aptitude install libpcre++-dev -y
+./configure
+checkinstall
+```
+
 root
 
 ```
