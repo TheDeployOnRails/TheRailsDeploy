@@ -107,6 +107,6 @@ check_soft 'optipng'
 check_soft 'pngcrush'
 check_soft 'pngout'
 
-title "WebServer"
+title "WebServer:"
 
 check_soft 'nginx'
