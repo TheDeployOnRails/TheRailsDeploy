@@ -164,6 +164,8 @@ cd nginx-1.7.4/
 aptitude install libpcre++-dev -y
 ./configure
 checkinstall
+
+ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 ```
 
 root
