@@ -89,6 +89,7 @@ apt-get install mysql-server mysql-common mysql-client libmysqlclient-dev libmys
 
 mysql -u root -pMYSQL_ROOT_PASSWORD
 mysql> CREATE USER 'rails'@'localhost' IDENTIFIED BY 'MYSQL_RAILS_USER_PASSWORD';
+GRANT ALL ON *.* TO 'rails'@'localhost';
 mysql> \q
 ```
 
