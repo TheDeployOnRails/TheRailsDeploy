@@ -161,7 +161,10 @@ wget http://nginx.org/download/nginx-1.7.4.tar.gz
 tar -xzf nginx-1.7.4.tar.gz
 cd nginx-1.7.4/
 
-aptitude install libpcre++-dev -y
+# aptitude install libpcre++-dev -y
+# aptitude install libssl-dev
+# aptitude install libgeoip-dev
+
 ./configure
 checkinstall
 
