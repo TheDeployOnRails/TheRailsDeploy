@@ -106,3 +106,7 @@ check_soft 'jpegtran'
 check_soft 'optipng'
 check_soft 'pngcrush'
 check_soft 'pngout'
+
+title "WebServer"
+
+check_soft 'nginx'
