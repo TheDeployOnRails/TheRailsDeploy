@@ -165,8 +165,8 @@ cd nginx-1.7.4/
 # aptitude install libssl-dev
 # aptitude install libgeoip-dev
 
-./configure
-checkinstall
+./configure --with-http_gzip_static_module
+checkinstall 
 
 ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 ```
