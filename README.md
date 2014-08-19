@@ -107,3 +107,8 @@ root@178.62.15.173's password: [RAILS_USER_PASSWORD]
 mkdir -p ~/.ssh
 ```
 
+**Create ssh pair if it's required**
+
+[How to create ssh pair](https://github.com/the-teacher/TheRailsDeploy/blob/master/how_to_create_shh_pair.md)
+
+
