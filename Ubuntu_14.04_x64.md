@@ -1,5 +1,5 @@
 ```
-useradd -m -d /home/rails rails
+useradd -m -d /home/rails rails -s /bin/bash
 passwd rails
 
 Enter new UNIX password:  [RAILS_USER_PASSWORD]
