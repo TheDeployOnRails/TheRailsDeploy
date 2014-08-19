@@ -112,3 +112,28 @@ mkdir -p ~/.ssh
 [How to create ssh pair](https://github.com/the-teacher/TheRailsDeploy/blob/master/how_to_create_shh_pair.md)
 
 
+**Authorize public ssh key on server for root**
+
+```
+cat ~/.ssh/id_rsa.pub | ssh root@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
+password: [ROOT_PASSWORD]
+```
+
+**Authorize public ssh key on server for  rails user**
+
+```
+cat ~/.ssh/id_rsa.pub | ssh rails@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
+password: [RAILS_USER_PASSWORD]
+```
+
+**3.** Try to access to your server
+
+If your Passphrase was empty, you will pass to server without password
+
+```
+ssh root@178.62.15.173
+```
+
+```
+ssh rails@178.62.15.173
+```
