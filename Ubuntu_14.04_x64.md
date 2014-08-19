@@ -1,3 +1,14 @@
+```
+useradd -m -d /home/rails rails
+passwd rails
+
+Enter new UNIX password:  [RAILS_USER_PASSWORD]
+Retype new UNIX password: [RAILS_USER_PASSWORD]
+
+# grep rails /etc/passwd
+# userdel rails
+```
+
 ```sh
 cd ~
 
@@ -26,14 +37,6 @@ apt-get install build-essential -y
 apt-add-repository ppa:brightbox/ruby-ng -y
 apt-get update
 apt-get install ruby2.1 ruby2.1-dev -y
-```
-
-```
-useradd rails
-passwd rails
-
-Enter new UNIX password:  [RAILS_USER_PASSWORD]
-Retype new UNIX password: [RAILS_USER_PASSWORD]
 ```
 
 ```
