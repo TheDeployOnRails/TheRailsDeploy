@@ -207,3 +207,13 @@ RUBY_VERSION='ruby-2.1.1'
 GEMSET_NAME='default'
 ENV_NAME='development'
 ```
+
+**Run your Dummy App**
+
+```
+_app/init.sh
+
+_app/start.sh
+
+_app/stop.sh
+```
