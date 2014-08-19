@@ -46,6 +46,12 @@ apt-get install bison libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 -y
 ```
 
 ```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.bashrc
+rvm list
+```
+
+```
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 apt-get install nodejs -y
 ```
@@ -174,13 +180,6 @@ checkinstall
 ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 ```
 
-root
-
-```
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-source ~/.bashrc
-rvm list
-```
 
 rails
 
