@@ -31,6 +31,12 @@ as you wish
 **Select Image**
 
 ```
+Applications > Ubuntu 14.04 x64
+```
+
+Or
+
+```
 Applications > Ruby on Rails on Ubuntu 14.04 (Nginx + Unicorn)
 ```
 
@@ -77,6 +83,13 @@ Changing password for root.
 Enter  new UNIX password: ROOT_PASSWORD
 Retype new UNIX password: ROOT_PASSWORD
 ```
+
+**Setup your server**
+
+
+[Ubuntu 14.04 x64 setup manual](https://github.com/the-teacher/TheRailsDeploy/blob/master/Ubuntu_14.04_x64.md)
+
+[Ruby on Rails on Ubuntu 14.04 (Nginx + Unicorn) setup manual](https://github.com/the-teacher/TheRailsDeploy/blob/master/RoR_Nginx_Unicorn_14.04_x64.md)
 
 ```
 -------------------------------------------------------------------------------------
