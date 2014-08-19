@@ -137,3 +137,10 @@ ssh root@178.62.15.173
 ```
 ssh rails@178.62.15.173
 ```
+
+**Clone Dummy App for depoly**
+
+```
+git clone https://github.com/TheDeployOnRails/dummy_app_for_deploy.git
+cd dummy_app_for_deploy
+```
