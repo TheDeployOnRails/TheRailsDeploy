@@ -136,8 +136,9 @@ checkinstall
 ```
 
 ```
-cd /tmp
 apt-get install openjdk-7-jre-headless -y
+
+cd /tmp
 wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.deb
 dpkg -i elasticsearch-1.1.1.deb
 ln -s /etc/init.d/elasticsearch /usr/local/bin/elasticsearch
