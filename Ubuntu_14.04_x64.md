@@ -129,7 +129,7 @@ cd sphinx-2.1.9-release
 
 checkinstall
 
-# PS: if libpq-fe.h not found, following exposts can be helpful
+# PS: if libpq-fe.h not found, following exporsts can be helpful
 # export C_INCLUDE_PATH=/usr/include/postgresql/
 # export CPLUS_INCLUDE_PATH=/usr/include/postgresql/
 # export LIBRARY_PATH=/usr/include/postgresql/
