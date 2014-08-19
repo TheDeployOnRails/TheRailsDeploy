@@ -91,3 +91,19 @@ Retype new UNIX password: ROOT_PASSWORD
 
 [Ruby on Rails on Ubuntu 14.04 (Nginx + Unicorn) setup manual](https://github.com/the-teacher/TheRailsDeploy/blob/master/RoR_Nginx_Unicorn_14.04_x64.md)
 
+**Ensure that ~/.ssh folders exists for users**
+
+```
+ssh root@178.62.15.173
+root@178.62.15.173's password: [ROOT_PASSWORD]
+
+mkdir -p ~/.ssh
+```
+
+```
+ssh rails@178.62.15.173
+root@178.62.15.173's password: [RAILS_USER_PASSWORD]
+
+mkdir -p ~/.ssh
+```
+
