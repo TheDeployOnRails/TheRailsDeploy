@@ -141,6 +141,69 @@ ssh rails@178.62.15.173
 **Clone Dummy App for depoly**
 
 ```
+# local machine
+
 git clone https://github.com/TheDeployOnRails/dummy_app_for_deploy.git
 cd dummy_app_for_deploy
+bundle
+```
+
+**Start Dev Env with bash scripts**
+
+```
+cp config/_database.yml.example config/database.yml
+
+cp config/_unicorn.rb.example config/unicorn.rb
+cp config/_schedule.rb.example config/schedule.rb
+cp config/_redis_6010.config.example config/redis_6010.config
+cp config/_sidekiq.config.yml.example config/sidekiq.config.yml
+cp config/_thinking_sphinx.yml.example config/thinking_sphinx.yml
+```
+
+**Change database config**
+
+```
+config/database.yml
+```
+
+**Prepare database**
+
+```
+rake db:create
+rake db:migrate
+rake db:seed
+```
+
+**Change your AppStarts bash scripts**
+
+```
+which rvm
+
+# => /Users/admin/.rvm/bin/rvm
+```
+
+```
+rvm list
+
+# =* ruby-2.1.1 [ x86_64 ]
+```
+
+```
+rvm gemset name
+
+# /Users/admin/.rvm/gems/ruby-2.1.1
+# aka 'default'
+```
+
+Edit file `_app/_vars.sh`
+
+```
+#######################################
+# VARIABLES FOR INIT/START/STOP SCRIPTS
+#######################################
+
+# MAIN VARS
+RUBY_VERSION='ruby-2.1.1'
+GEMSET_NAME='default'
+ENV_NAME='development'
 ```
