@@ -160,14 +160,12 @@ cp /tmp/pngout-20130221-linux/x86_64/pngout /usr/local/bin/
 ```
 
 ```
+apt-get install libpcre++-dev libssl-dev libgeoip-dev -y
+
 cd /tmp
 wget http://nginx.org/download/nginx-1.7.4.tar.gz
 tar -xzf nginx-1.7.4.tar.gz
 cd nginx-1.7.4/
-
-# aptitude install libpcre++-dev -y
-# aptitude install libssl-dev
-# aptitude install libgeoip-dev
 
 ./configure --with-http_gzip_static_module
 checkinstall 
@@ -204,8 +202,11 @@ source ~/.bashrc
 rvm list
 ```
 
+```sh
+cd ~
 
-```
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-/usr/local/rvm/bin/rvm -v
+wget https://raw.githubusercontent.com/the-teacher/TheRailsDeploy/master/check_soft.sh
+chmod 744 check_soft.sh
+
+~/check_soft.sh
 ```
