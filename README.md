@@ -217,3 +217,11 @@ _app/start.sh
 
 _app/stop.sh
 ```
+
+**Install DeployTool into your project**
+
+```
+git clone https://github.com/TheDeployOnRails/TheDeployTool.git DeployTool
+cd DeployTool
+bundle
+```
