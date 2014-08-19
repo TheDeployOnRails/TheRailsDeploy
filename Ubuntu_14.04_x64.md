@@ -47,8 +47,8 @@ apt-get install bison libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 -y
 
 ```
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
-source ~/.bashrc
-rvm list
+
+/usr/local/rvm/bin/rvm -v
 ```
 
 ```
@@ -180,15 +180,6 @@ checkinstall
 ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 ```
 
-
-rails
-
-```
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-source ~/.bashrc
-rvm list
-```
-
 ```
 # user  nobody;
 worker_processes  1;
@@ -208,4 +199,12 @@ http {
 
   include /home/rails/www/rails_app/shared/web_server/nginx/config;
 }
+```
+
+**rails**
+
+```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.bashrc
+rvm list
 ```
