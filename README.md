@@ -126,7 +126,7 @@ cat ~/.ssh/id_rsa.pub | ssh rails@178.62.15.173 'cat >> ~/.ssh/authorized_keys'
 password: [RAILS_USER_PASSWORD]
 ```
 
-**3.** Try to access to your server
+**Try to access to your server**
 
 If your Passphrase was empty, you will pass to server without password
 
