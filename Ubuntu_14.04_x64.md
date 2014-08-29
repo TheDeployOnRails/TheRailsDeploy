@@ -194,6 +194,16 @@ http {
 }
 ```
 
+```
+sudo -s 'echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list'
+wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -
+wget -O- https://download.newrelic.com/548C16BF.gpg | sudo apt-key add -
+apt-get update
+apt-get install newrelic-sysmond
+nrsysmond-config --set license_key=[YOUR_LICENSE_KEY]
+/etc/init.d/newrelic-sysmond start
+```
+
 **rails**
 
 ```
