@@ -106,6 +106,7 @@ check_soft 'jpegtran'
 check_soft 'optipng'
 check_soft 'pngcrush'
 check_soft 'pngout'
+check_soft 'pngquant'
 
 title "WebServer:"
 
